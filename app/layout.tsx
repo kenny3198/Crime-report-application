@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import {Inter} from "next/font/google"
 import "./globals.css";
 import NavBar from "@/components/NavBar";
-
+import { Providers } from "./providers";
 const inter = Inter({subsets:['latin']})
 
 
@@ -24,7 +24,9 @@ export default function ({children}: {children: React.ReactNode}) {
               {/* Navbaar */}
               <NavBar />
               <main className="pt-17">
-                      {children}
+             <Providers>
+             {children}
+             </Providers>
               </main>
           
        </div>

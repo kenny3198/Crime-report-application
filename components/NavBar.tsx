@@ -40,17 +40,17 @@ export default function NavBar() {
                     <Link href={'/track-report'} className="text-sm text-zinc-400 hover:text-white transition-colors">
                       Track Report
                     </Link>
-                    <Link href={'/how-it-works'} className="text-sm text-zinc-400 hover:text-white transition-colors">
-                      How It Works
+                    <Link href={'/auth/signin'} className="text-sm text-zinc-400 hover:text-white transition-colors">
+                      Login
                     </Link>
-                    <Link href={'/resources'} className="text-sm text-zinc-400 hover:text-white transition-colors">
-                      Resources
+                    <Link href={'/auth/signout'} className="text-sm text-zinc-400 hover:text-white transition-colors">
+                      Register
                     </Link>
                   </div>
                   {/* EMERGENCY BUTTON */}
                   <div className="flex items-center space-x-4">
-                    <Link href={'/contact'} className="hidden md:flex text-sm text-zinc-400 hover:text-white transition-colors">
-                     Contact
+                    <Link href={'/dashboard'} className="hidden md:flex text-sm text-zinc-400 hover:text-white transition-colors">
+                     Dashboard
                     </Link>
                     <button className="group flex h-9 items-center gap-2 rounded-full bg-red-500/10 pl-4
                      pr-5 font-medium text-red-500 ring-1 ring-inset ring-red-500/20 transition-all hover:bg-red-500/20">
