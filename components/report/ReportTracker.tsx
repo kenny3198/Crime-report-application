@@ -134,9 +134,12 @@ export function ReportTracker() {
                          flex items-center justify-center space-x-2"
               >
                 {loading ? (
+                  
                   <Loader className="w-5 h-5 animate-spin" />
+                                   
                 ) : (
-                  <Search className="w-5 h-5" />
+                  
+                   <Search className="w-5 h-5" />
                 )}
                 <span>{loading ? "Searching..." : "Track Report"}</span>
               </button>

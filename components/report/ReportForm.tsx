@@ -108,7 +108,7 @@ const ReportForm = ({ onComplete }: ReportFormProps) => {
      }
   }
   return <form onSubmit={handleSubmit} className='space-y-8'>
-  {/* mergency type selection */}
+  {/* emergency type selection */}
     <div className="grid grid-cols-2 gap-4">
         <button
           type="button"  

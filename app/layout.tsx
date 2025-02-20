@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Safe Report Application",
   description: "Securely And Anonymous report to law enforcement"
 }
-export default function ({children}: {children: React.ReactNode}) {
+export default function RootLayout ({children}: {children: React.ReactNode}) {
   return (
     <html lang="en">
     <body className={inter.className}>

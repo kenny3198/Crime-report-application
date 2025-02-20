@@ -20,6 +20,7 @@ const fetchReports = async () => {
         const response = await fetch("/api/reports")
         const data = await response.json()
         setReports(data)
+        console.log(data)
     } catch (error) {
       console.error("Error fetching report:", error)  
     } finally {
@@ -48,11 +49,17 @@ const updateReportStatus = async (
     }
   };
 
-  const filteredReports = reports.filter((report) => {
-    const statusMatch = filter === "ALL" || report.status === filter;
-    const typeMatch = typeFilter === "ALL" || report.type === typeFilter;
+  // const filteredReports = reports.filter((report) => {
+  //   const statusMatch = filter === "ALL" || report.status === filter;
+  //   const typeMatch = typeFilter === "ALL" || report.type === typeFilter;
+  //   return statusMatch && typeMatch;
+  // });
+  const filteredReports = Object.values(reports).filter((report) => {
+    const statusMatch = filter === "ALL" || report.status === filter
+    const typeMatch = typeFilter === "ALL" || report.type === typeFilter
     return statusMatch && typeMatch;
-  });
+  })
+  
 
   const getStatusColor = (status: ReportStatus) => {
     const colors = {
@@ -131,7 +138,7 @@ const updateReportStatus = async (
           </div>
 
           <div className="text-neutral-400">
-            {filteredReports.length} Reports
+            {/* {filteredReports.length} Reports */}
           </div>
         </div>
 
